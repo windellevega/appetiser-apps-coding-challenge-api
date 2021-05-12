@@ -1,6 +1,6 @@
 ## Back-end app (API) of Appetiser App Coding Challenge
 
-This a is a simple event calendar web app for coding challenge on Appetise
+This a is a simple event calendar web app for coding challenge on Appetiser Apps
 
 ## Project Setup
 1. After cloning the repository, create a `.env` file using `.env.example`
