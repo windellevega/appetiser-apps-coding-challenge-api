@@ -19,6 +19,10 @@ class EventController extends Controller
     {
         $event = Event::first();
 
+        if (!$event) {
+            return abort(404);
+        }
+
         // Get array of dates only e.g. ['2021-05-12', '2021-05-13']
         $eventDates = $event->eventDates()->pluck('event_date');
         $event->event_dates = $eventDates->all();
