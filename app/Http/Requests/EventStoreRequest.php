@@ -28,7 +28,7 @@ class EventStoreRequest extends FormRequest
             'event_name'        => ['required', 'string'],
             'event_date_from'   => ['required', 'date'],
             'event_date_to'     => ['required', 'date'],
-            'event_days'        => ['required', 'array', 'min:1', 'max:7']
+            'event_days'        => ['required', 'array', 'between:1,7']
         ];
     }
 }
