@@ -17,7 +17,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $event = Event::first();
+        $event = Event::latest()->first();
 
         if (!$event) {
             return abort(404);
@@ -38,11 +38,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $record = Event::first();
-        if ($record) {
-            $record->delete();
-        }
-
         $event = Event::create([
             'event_name' => $request->event_name
         ]);
